@@ -16,6 +16,6 @@ int add(int firstNumber, int secondNumber, [int? thirdNumber]) {
   }
 }
 
-int add(int firstNumber, int secondNumber, [int thirdNumber = 0]) {
-  return firstNumber + secondNumber + thirdNumber;
-}
+// int add(int firstNumber, int secondNumber, [int thirdNumber = 0]) {
+//   return firstNumber + secondNumber + thirdNumber;
+// }
