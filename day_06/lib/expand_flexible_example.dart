@@ -5,28 +5,44 @@ class ExpandFlexibleExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          child: Container(
-            color: Colors.blue,
-          ),
-        ),
-        Expanded(
-          child: Container(
-            color: Colors.green,
-          ),
-        ),
-        // Flexible(
-        //   flex: 1,
+        // Container(
+        //   color: Colors.blue,
+        //   height: 100.0,
+        //   width: 100.0,
+        // ),
+        // Container(
+        //   color: Colors.red,
+        //   height: 100.0,
+        //   width: 100.0,
+        // ),
+        // Expanded(
         //   child: Container(
         //     color: Colors.blue,
         //   ),
         // ),
-        // Flexible(
-        //   flex: 2,
+        // Expanded(
         //   child: Container(
         //     color: Colors.green,
         //   ),
         // ),
+
+        Flexible(
+          flex: 1,
+          child: Container(
+            color: Colors.blue,
+            child: Icon(
+              Icons.phone,
+              size: 100,
+              color: Colors.yellow,
+            ),
+          ),
+        ),
+        Flexible(
+          // flex: 2,
+          child: Container(
+            color: Colors.green,
+          ),
+        ),
       ],
     );
   }

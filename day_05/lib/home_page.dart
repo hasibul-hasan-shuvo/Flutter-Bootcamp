@@ -16,9 +16,13 @@ class _HomePageState extends State<HomePage> {
       child: Container(
         color: Colors.red,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Image(
+              image: AssetImage("images/flutter_image.jpeg"),
+              fit: BoxFit.fitWidth,
+            ),
             Image(
               image: AssetImage("images/flutter_image.jpeg"),
               fit: BoxFit.fitWidth,

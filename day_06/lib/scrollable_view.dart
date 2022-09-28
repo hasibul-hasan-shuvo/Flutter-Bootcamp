@@ -7,6 +7,7 @@ class ScrollableView extends StatelessWidget {
       child: Container(
         color: Colors.white,
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
