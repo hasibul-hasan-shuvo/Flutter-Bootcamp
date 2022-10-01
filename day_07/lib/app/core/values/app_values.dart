@@ -1,0 +1,80 @@
+abstract class AppValues {
+  static const double fontSize_10 = 10;
+  static const double fontSize_12 = 12;
+  static const double fontSize_14 = 14;
+  static const double fontSize_16 = 16;
+  static const double fontSize_18 = 18;
+  static const double fontSize_19 = 19;
+  static const double fontSize_20 = 20;
+  static const double fontSize_21 = 21;
+  static const double fontSize_24 = 24;
+  static const double fontSize_25 = 25;
+  static const double fontSize_28 = 28;
+  static const double fontSize_30 = 30;
+  static const double fontSize_31 = 31;
+  static const double fontSize_32 = 32;
+  static const double fontSize_40 = 40;
+
+  static const double iconDefaultSize = 24;
+  static const double iconExtraLargerSize = 96;
+  static const double iconLargeSize = 36;
+  static const double iconSizeLauncher = 200;
+  static const double iconSize_10 = 10;
+  static const double iconSize_14 = 14;
+  static const double iconSize_18 = 18;
+  static const double iconSize_20 = 20;
+  static const double iconSize_22 = 22;
+  static const double iconSize_24 = 24;
+  static const double iconSize_28 = 28;
+  static const double iconSize_30 = 30;
+  static const double iconSize_32 = 32;
+  static const double iconSize_36 = 36;
+  static const double iconSize_40 = 40;
+  static const double iconSize_5 = 5;
+  static const double iconSmallerSize = 12;
+  static const double iconSmallSize = 16;
+
+  static const double margin = 16;
+  static const double marginBelowVerticalLine = 64;
+  static const double margin_10 = 10;
+  static const double margin_12 = 12;
+  static const double margin_16 = 16;
+  static const double margin_18 = 18;
+  static const double margin_26 = 26;
+  static const double margin_2 = 2;
+  static const double margin_20 = 20;
+  static const double margin_30 = 30;
+  static const double margin_32 = 32;
+  static const double margin_3 = 4;
+  static const double margin_4 = 4;
+  static const double margin_5 = 5;
+  static const double margin_40 = 40;
+  static const double margin_6 = 6;
+  static const double margin_8 = 8;
+  static const double margin_zero = 0;
+
+  static const double padding = 15;
+  static const double padding_10 = 10;
+  static const double padding_12 = 12;
+  static const double padding_14 = 14;
+  static const double padding_2 = 2;
+  static const double padding_20 = 20;
+  static const double padding_24 = 24;
+  static const double padding_30 = 30;
+  static const double padding_3 = 3;
+  static const double padding_4 = 4;
+  static const double padding_5 = 5;
+  static const double padding_8 = 8;
+  static const double padding_zero = 0;
+
+  static const double radius = 16;
+  static const double radius_5 = 5;
+  static const double radius_10 = 10;
+  static const double radius_12 = 12;
+  static const double radius_6 = 6;
+  static const double radius_8 = 8;
+
+  static const double dividerThickness = 2.0;
+  static const double myImageWidth = 80.0;
+  static const double myImageHeight = 80.0;
+}
