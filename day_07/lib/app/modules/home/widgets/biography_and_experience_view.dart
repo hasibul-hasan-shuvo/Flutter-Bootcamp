@@ -1,5 +1,6 @@
 import 'package:day_07/app/core/values/app_values.dart';
 import 'package:day_07/app/core/values/text_styles.dart';
+import 'package:day_07/app/core/widgets/title_view.dart';
 import 'package:day_07/app/modules/home/widgets/item_company_details.dart';
 import 'package:flutter/material.dart';
 
@@ -11,21 +12,14 @@ class BiographyAndExperienceView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _getTitle("Biography"),
+        const TitleView(title: "Biography"),
         const SizedBox(height: AppValues.margin),
         _getBiography(),
         const SizedBox(height: AppValues.margin),
-        _getTitle("Experience"),
+        const TitleView(title: "Experience"),
         const SizedBox(height: AppValues.margin),
         ItemCompanyDetails(),
       ],
-    );
-  }
-
-  Widget _getTitle(String title) {
-    return Text(
-      title,
-      style: title_01,
     );
   }
 

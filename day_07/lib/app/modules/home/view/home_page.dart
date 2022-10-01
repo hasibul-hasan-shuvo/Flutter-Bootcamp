@@ -2,6 +2,7 @@ import 'package:day_07/app/core/values/app_colors.dart';
 import 'package:day_07/app/core/values/app_values.dart';
 import 'package:day_07/app/modules/home/widgets/biography_and_experience_view.dart';
 import 'package:day_07/app/modules/home/widgets/information_view.dart';
+import 'package:day_07/app/modules/home/widgets/skills_view.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +28,8 @@ class HomePage extends StatelessWidget {
             _getDivider(),
             const SizedBox(height: AppValues.margin_5),
             BiographyAndExperienceView(),
-            const SizedBox(height: AppValues.margin_5),
+            const SizedBox(height: AppValues.margin),
+            SkillsView(),
           ],
         ),
       ),
