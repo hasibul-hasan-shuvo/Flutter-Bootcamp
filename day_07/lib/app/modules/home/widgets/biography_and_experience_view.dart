@@ -25,7 +25,7 @@ class BiographyAndExperienceView extends StatelessWidget {
 
   Widget _getBiography() {
     return Text(
-      "Enthusiastic, self-motivated and responsible subject matter expert in mobile app development with three years’ experience in developing, improving app performance and maintaining existing applications. Have excellent analytic skills and good knowledge of Object-Oriented Programming and developing architecture.",
+      "Enthusiastic, self-motivated and responsible subject matter expert in mobile app development with four years’ experience in developing, improving app performance and maintaining existing applications. Have excellent analytic skills and good knowledge of Object-Oriented Programming and developing architecture.",
       style: body_01,
       textAlign: TextAlign.justify,
     );

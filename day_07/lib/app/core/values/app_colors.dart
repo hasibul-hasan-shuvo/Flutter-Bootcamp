@@ -18,4 +18,5 @@ abstract class AppColors {
   static const Color textColorWhite = Color(0xFFFFFFFF);
   static const Color colorPrimary = Color(0xFFF25B1D);
   static const Color colorPrimaryDark = Color(0xFFEE0B18);
+  static const Color colorInActiveProgress = Color(0xFFFDDCD2);
 }
