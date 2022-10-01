@@ -74,14 +74,14 @@ class InformationView extends StatelessWidget {
     return const Icon(
       Icons.email_outlined,
       color: AppColors.colorPrimary,
-      size: AppValues.iconSize_20,
+      size: AppValues.iconSize_14,
     );
   }
 
   Widget _getEmail() {
     return const Text(
       "shovocse753@gmail.com",
-      style: body_01,
+      style: body_02,
     );
   }
 }

@@ -77,4 +77,6 @@ abstract class AppValues {
   static const double dividerThickness = 1.0;
   static const double myImageWidth = 80.0;
   static const double myImageHeight = 80.0;
+  static const double companyLogoWidth = 60.0;
+  static const double companyLogoHeight = 60.0;
 }
