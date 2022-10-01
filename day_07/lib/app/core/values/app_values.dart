@@ -74,7 +74,7 @@ abstract class AppValues {
   static const double radius_6 = 6;
   static const double radius_8 = 8;
 
-  static const double dividerThickness = 2.0;
+  static const double dividerThickness = 1.0;
   static const double myImageWidth = 80.0;
   static const double myImageHeight = 80.0;
 }
