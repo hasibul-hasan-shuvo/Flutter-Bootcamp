@@ -1,0 +1,1 @@
+enum Privacy {PUBLIC , PRIVATE}
