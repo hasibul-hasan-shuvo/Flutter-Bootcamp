@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as shuvo;
 
 void main() {
-  postRequestTest();
+  putRequestTest();
 }
 
 void getRequestTest() async {
@@ -22,11 +22,38 @@ void postRequestTest() async {
     "job": "Software Engineer",
   };
 
-  Uri url = Uri.https("reqres.in", "/api/users");
+  Uri url = Uri.https("reqres.in", "api/users");
   Future<shuvo.Response> apiResponse = shuvo.post(
     url,
     body: userData,
   );
   shuvo.Response response = await apiResponse;
   print("StatusCode: ${response.statusCode}, \n\nData: ${response.body}");
+  Map<String, dynamic> json = jsonDecode(response.body);
+}
+
+void putRequestTest() async {
+  Map<String, dynamic> userData = {
+    "name": "Shuvo",
+    "job": "Software Engineer",
+  };
+
+  Uri url = Uri.https("reqres.in", "api/users/2");
+  Future<shuvo.Response> apiResponse = shuvo.put(
+    url,
+    body: userData,
+  );
+  shuvo.Response response = await apiResponse;
+  print("StatusCode: ${response.statusCode}, \n\nData: ${response.body}");
+  Map<String, dynamic> json = jsonDecode(response.body);
+}
+
+void getUserList() async {
+  Uri url = Uri.https("reqres.in", "api/users");
+  Future<shuvo.Response> apiResponse = shuvo.get(url);
+  shuvo.Response response = await apiResponse;
+  print(response.statusCode);
+
+  Map<String, dynamic> json = jsonDecode(response.body);
+  print("User Data: $json");
 }
