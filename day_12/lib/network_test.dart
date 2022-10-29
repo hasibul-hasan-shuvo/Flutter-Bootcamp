@@ -8,8 +8,7 @@ void main() {
 
 void getRequestTest() async {
   Uri url = Uri.https("ifconfig.co", "json");
-  Future<shuvo.Response> apiResponse = shuvo.get(url);
-  shuvo.Response response = await apiResponse;
+  shuvo.Response response = await shuvo.get(url);
   print(response.body);
 
   Map<String, dynamic> json = jsonDecode(response.body);
@@ -23,11 +22,10 @@ void postRequestTest() async {
   };
 
   Uri url = Uri.https("reqres.in", "api/users");
-  Future<shuvo.Response> apiResponse = shuvo.post(
+  shuvo.Response response = await shuvo.post(
     url,
     body: userData,
   );
-  shuvo.Response response = await apiResponse;
   print("StatusCode: ${response.statusCode}, \n\nData: ${response.body}");
   Map<String, dynamic> json = jsonDecode(response.body);
 }
@@ -39,19 +37,17 @@ void putRequestTest() async {
   };
 
   Uri url = Uri.https("reqres.in", "api/users/2");
-  Future<shuvo.Response> apiResponse = shuvo.put(
+  shuvo.Response response = await shuvo.put(
     url,
     body: userData,
   );
-  shuvo.Response response = await apiResponse;
   print("StatusCode: ${response.statusCode}, \n\nData: ${response.body}");
   Map<String, dynamic> json = jsonDecode(response.body);
 }
 
 void getUserList() async {
   Uri url = Uri.https("reqres.in", "api/users");
-  Future<shuvo.Response> apiResponse = shuvo.get(url);
-  shuvo.Response response = await apiResponse;
+  shuvo.Response response = await shuvo.get(url);
   print(response.statusCode);
 
   Map<String, dynamic> json = jsonDecode(response.body);
