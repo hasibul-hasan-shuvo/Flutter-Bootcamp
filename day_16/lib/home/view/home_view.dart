@@ -9,7 +9,8 @@ class CounterClass {
 }
 
 class HomeView extends StatelessWidget {
-  // final HomeController controller = Get.find();
+  // final HomeController controller = Get.find(tag: "SettingsViewController");
+  // final PreferenceManager preferenceManager = PreferenceManagerImpl();
   final HomeController controller = HomeController();
 
   @override
@@ -50,18 +51,26 @@ class HomeView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        FloatingActionButton(
-          onPressed: controller.decrementCounter,
-          tooltip: 'Decrement',
-          child: const Icon(Icons.remove),
-        ),
+        _getDecrementFloatingButton(),
         const SizedBox(width: 20),
-        FloatingActionButton(
-          onPressed: controller.incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ),
+        _getIncrementFloatingButton(),
       ],
+    );
+  }
+
+  Widget _getDecrementFloatingButton() {
+    return FloatingActionButton(
+      onPressed: controller.decrementCounter,
+      tooltip: 'Decrement',
+      child: const Icon(Icons.remove),
+    );
+  }
+
+  Widget _getIncrementFloatingButton() {
+    return FloatingActionButton(
+      onPressed: controller.incrementCounter,
+      tooltip: 'Increment',
+      child: const Icon(Icons.add),
     );
   }
 }

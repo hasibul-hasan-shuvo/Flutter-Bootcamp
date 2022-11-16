@@ -1,6 +1,7 @@
 import 'package:day_15/app_database.dart';
 import 'package:day_15/create_note.dart';
 import 'package:day_15/note.dart';
+import 'package:floor/floor.dart';
 import 'package:flutter/material.dart';
 
 class NoteList extends StatefulWidget {
@@ -23,7 +24,11 @@ class _NoteListState extends State<NoteList> {
     final AppDatabase database =
         await $FloorAppDatabase.databaseBuilder('app_database.db').build();
 
+    QueryAdapter(database.database);
+
     List<Note> list = await database.noteDao.getAllNotes();
+    print("Note List 2: ${(await database.noteDao.getNotes())[2].title}");
+
     setState(() {
       noteList = list;
     });

@@ -1,0 +1,21 @@
+import 'package:day_18_database_multiple_table/app/modules/home/model/student_list_item_ui_model.dart';
+
+class HomeController {
+  List<StudentListItemUiModel> studentList = [
+    StudentListItemUiModel(
+      name: "John Doe",
+      email: "john@example.com",
+      id: 1,
+    ),
+    StudentListItemUiModel(
+      name: "John Doe 2",
+      email: "john2@example.com",
+      id: 2,
+    ),
+    StudentListItemUiModel(
+      name: "John Doe 3",
+      email: "john3@example.com",
+      id: 3,
+    ),
+  ];
+}
