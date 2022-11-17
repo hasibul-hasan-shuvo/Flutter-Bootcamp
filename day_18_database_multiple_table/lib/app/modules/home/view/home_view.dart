@@ -1,12 +1,16 @@
 import 'package:day_18_database_multiple_table/app/modules/home/controller/home_controller.dart';
+import 'package:day_18_database_multiple_table/app/modules/home/widget/home_empty_widget.dart';
 import 'package:day_18_database_multiple_table/app/modules/home/widget/item_student_list_widget.dart';
+import 'package:day_18_database_multiple_table/routes/app_routes.dart';
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
   final HomeController controller = HomeController();
 
-  HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key) {
+    controller.getStudentList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,11 @@ class HomeView extends StatelessWidget {
   }
 
   Widget _getBody() {
-    return _getStudentListView();
+    return Obx(
+      () => controller.studentList.isEmpty
+          ? const HomeEmptyWidget()
+          : _getStudentListView(),
+    );
   }
 
   Widget _getStudentListView() {
@@ -40,7 +48,22 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  void _onAddStudentButtonPressed() {
-    Logger().d("Add student clicked");
+  void _onAddStudentButtonPressed() async {
+    // AppDatabase database =
+    //     await $FloorAppDatabase.databaseBuilder("app_database.db").build();
+    // database.subjectDao.insertSubject(
+    //   SubjectEntity(
+    //       name: "Operating system", code: 12, credit: 5, registrationNo: "125"),
+    // );
+
+    //
+    // Logger().d(
+    //     (await database.subjectDao.getSubjectByRegistrationNo("124")).length);
+
+    Get.toNamed(AppRoutes.STUDENT_ENTRY)?.then((isRefreshable) {
+      if (isRefreshable == true) {
+        controller.getStudentList();
+      }
+    });
   }
 }
