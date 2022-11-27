@@ -22,12 +22,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => const LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.STUDENT_INFO,
-      page: () => const StudentInfoView(),
+      page: () => StudentInfoView(),
       binding: StudentInfoBinding(),
     ),
   ];

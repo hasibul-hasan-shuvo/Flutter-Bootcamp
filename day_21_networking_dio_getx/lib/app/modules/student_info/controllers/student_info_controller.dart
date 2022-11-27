@@ -1,23 +1,19 @@
+import 'package:day_21_networking_dio_getx/app/data/repository/student_repository.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 
 class StudentInfoController extends GetxController {
-  //TODO: Implement StudentInfoController
+  final StudentRepository _repository = Get.find();
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    getStudentList();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void getStudentList() {
+    _repository.getStudentList().then((response) {
+      Logger().d("Student List: ${response.data}");
+    });
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
