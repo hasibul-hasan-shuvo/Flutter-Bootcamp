@@ -22,7 +22,7 @@ class LoginView extends GetView<LoginController> {
             "john@gmail.com",
             "1234",
           ),
-          child: Text("Register"),
+          child: Text("Login"),
         ),
       ),
     );
